@@ -30,6 +30,9 @@ document.getElementById("write-list").addEventListener("click", function () {
 
 // Oppgave 5
 
+/* 
+gammel knotete løsning
+
 document.getElementById("create").addEventListener("click", function () {
     if (document.getElementById("text").value === "h2") {
         const h2 = document.createElement("h2");
@@ -51,6 +54,19 @@ document.getElementById("create").addEventListener("click", function () {
     else {
         return alert("du må skrive h2 for å lage et h2-element")
     }
+}) */
+
+document.getElementById("create").addEventListener("click", function () {
+    const value = document.getElementById("text").value;
+    const allowedValues = ["h2", "h3", "p", "span"];
+    if (allowedValues.includes(value)) {
+        const newElement = document.createElement(value);
+        newElement.innerText = `${value}-element`;
+        document.getElementById("placeholder").appendChild(newElement);
+
+    } else {
+        alert("du må skrive h2, h3, p eller span for å lage et element");
+    }
 })
 
 // Oppgave 6
@@ -58,8 +74,10 @@ document.getElementById("create").addEventListener("click", function () {
 document.getElementById("remove-li").addEventListener("click", function () {
     const liListItems = document.getElementById("list");
     liListItems.removeChild(liListItems.lastElementChild)
-
 })
 
 // Oppgave 7
+
+
+
 // Oppgave 8
