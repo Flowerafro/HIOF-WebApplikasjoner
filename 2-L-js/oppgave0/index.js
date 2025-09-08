@@ -54,5 +54,12 @@ document.getElementById("create").addEventListener("click", function () {
 })
 
 // Oppgave 6
+
+document.getElementById("remove-li").addEventListener("click", function () {
+    const liListItems = document.getElementById("list");
+    liListItems.removeChild(liListItems.lastElementChild)
+
+})
+
 // Oppgave 7
 // Oppgave 8
