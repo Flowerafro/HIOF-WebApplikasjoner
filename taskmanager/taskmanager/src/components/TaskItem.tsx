@@ -1,3 +1,5 @@
+// tar imot tasktype ogonAction funksjon som prop. onAction skal trigges når knapp i TaskItem trykkes. Viser også overskrift og knapp. 
+
 import type { Task } from '../types';
 
 export default function TaskItem({
@@ -18,7 +20,7 @@ export default function TaskItem({
     <section>
       <h2>Task item</h2>
       {/* Knapp her */}
-      <button onClick={onTaskClick}>Task logger button</button>
+      <button onClick={onTaskClick}>Knapp</button>
     </section>
   );
 }
