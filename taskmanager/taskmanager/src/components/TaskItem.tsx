@@ -2,6 +2,7 @@
 
 import type { Task } from '../types';
 
+
 export default function TaskItem({
   task,
   onAction,
@@ -19,6 +20,8 @@ export default function TaskItem({
   return (
     <section>
       <h2>Task item</h2>
+      <p>{task.description}</p>
+      <p>{ `Dato opprettet: ${task.dueDate.toLocaleString()}`}</p>
       {/* Knapp her */}
       <button onClick={onTaskClick}>Knapp</button>
     </section>
