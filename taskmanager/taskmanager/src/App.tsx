@@ -1,19 +1,17 @@
 import { useState } from 'react';
 import './App.css';
 
-import TaskCard from './components/TaskCard';
 import TaskFooter from './components/TaskFooter';
-import TaskForm from './components/TaskForm';
 import TaskList from './components/TaskList';
 import TasksManager from './components/TaskManager';
 import type { Task } from './types';
 
-const task = {
+/* const task = {
   id: '123',
   title: 'My Title Works',
   description: 'My description',
   dueDate: new Date(),
-};
+}; */
 
 const initialTasks: Task[] = [
   {

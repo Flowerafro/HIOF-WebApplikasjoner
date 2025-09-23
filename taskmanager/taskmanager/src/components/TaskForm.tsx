@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from "react"
+import React from "react"
 import type { Task } from "../types"
 import { useTask } from "../hooks/useTask"
 
@@ -37,7 +37,6 @@ export default function TaskForm(props: TaskFormProps) {
         if(!actions.validateTask(task)) {
             alert("Alle felter må fylles inn")
             return
-
         }
 
         if(actions.validateTask(task)) {
