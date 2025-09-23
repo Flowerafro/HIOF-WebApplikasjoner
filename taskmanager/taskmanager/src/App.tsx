@@ -1,31 +1,40 @@
 import './App.css';
+
 import TaskFooter from './components/TaskFooter';
-
-/*import TaskCard from './components/TaskCard';*/
+import TaskForm from './components/TaskForm';
 import TaskList from './components/TaskList';
+import TaskManager from './components/TaskManager';
+import type { Task } from './types';
 
+const task = {
+  id: '123',
+  title: 'My Title Works',
+  description: 'My description',
+  dueDate: new Date(),
+};
 
-// denne listen må være en liste og hvert element må ha signaturen til Task-type
-const tasks = [
-  {id: '123',
-  title: 'Task 1',
-  description: 'Buy groceries',
-  dueDate: new Date(),
-},
-{
-  id: '124',
-  title: 'Task 2',
-  description: 'Do laundry',
-  dueDate: new Date(),
-}
-]
-// new Date() lager et nyy dato-objkt for hver oppgave. dueDate-feltet for hver task får verdien av tidspunktet da arrayen ble opprettet
+const tasks: Task[] = [
+  {
+    id: '1234',
+    title: 'My Title Works',
+    description: 'My description',
+    dueDate: new Date(),
+  },
+  {
+    id: '1235',
+    title: 'My Title Works',
+    description: 'My description',
+    dueDate: new Date(),
+  },
+];
 
 function App() {
   return (
     <div>
-      <h1>Task manager</h1>
+      <h1>Hey</h1>
       {/* <TaskCard task={task} /> */}
+      <TaskManager initialTasks={tasks} />
+      <TaskForm onTaskCreate={(task) => console.log(task)} />
       <TaskList tasks={tasks}>
         <TaskFooter />
       </TaskList>
