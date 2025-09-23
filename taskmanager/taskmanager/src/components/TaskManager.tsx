@@ -2,17 +2,17 @@ import { useState } from "react"
 import type { Task } from "../types"
 import TaskForm from "./TaskForm"
 
-
-//tar imot prop initialTasks utenifra og setter den som initial verdi i useState
-export default function TaskManager({
-    initialTasks
+export default function TasksManager({
+    onAddTask,
+    tasks
 }: {
-    initialTasks: Task[]
+    onAddTask: (task: Task) => void,
+    tasks: Task[]
 }) {
-    const [tasks, setTasks] = useState<Task[]>(initialTasks)
+    
 
     const onTaskCreate = (task: Task) => {
-        setTasks(prev => ([...prev, task]))
+        onAddTask(task)
     }
 
     return <section>
